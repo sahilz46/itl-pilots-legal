@@ -1,0 +1,61 @@
+:root {
+  --bg: #faf9f7;
+  --card: #ffffff;
+  --text: #1c1917;
+  --muted: #57534e;
+  --line: #e6e1db;
+  --accent: #df3450;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141211;
+    --card: #1e1b19;
+    --text: #f5f3f0;
+    --muted: #b8b1aa;
+    --line: #34302c;
+    --accent: #ff5a74;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+.brand .tile {
+  width: 44px; height: 44px; border-radius: 11px; background: var(--accent);
+  display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 20px;
+}
+.brand .name { font-weight: 600; font-size: 18px; }
+.brand .by { color: var(--muted); font-size: 14px; }
+h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.6px; margin: 0 0 8px; }
+.updated { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
+h2 { font-size: 21px; letter-spacing: -0.3px; margin: 40px 0 8px; }
+p, li { color: var(--text); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 20px 22px; margin: 16px 0;
+}
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+@media (max-width: 520px) {
+  h1 { font-size: 28px; }
+  main { padding-top: 36px; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  td { border-bottom: none; padding: 2px 0; }
+  tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  td:first-child { font-weight: 600; }
+}
